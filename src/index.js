@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './styles/index.css'
+import Header from './components/Header'
 import Home from './pages/Home/index'
 import Error from './components/Error/index'
 import reportWebVitals from './reportWebVitals'
@@ -10,6 +11,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
     <React.StrictMode>
         <Router>
+            <Header />
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="*" element={<Error />} />
