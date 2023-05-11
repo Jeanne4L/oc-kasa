@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import './styles/index.css'
 import Header from './components/Header'
 import Home from './pages/Home/index'
+import About from './pages/About'
 import Error from './components/Error/index'
 import reportWebVitals from './reportWebVitals'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
@@ -14,6 +15,7 @@ root.render(
             <Header />
             <Routes>
                 <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
                 <Route path="*" element={<Error />} />
             </Routes>
         </Router>
