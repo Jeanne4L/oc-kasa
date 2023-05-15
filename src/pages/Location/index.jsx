@@ -1,4 +1,3 @@
-import React from 'react'
 import Locations from '../../locations.json'
 import { useParams } from 'react-router-dom'
 import Carousel from '../../components/Carousel'
@@ -8,11 +7,11 @@ function Location() {
     const location = Locations.filter((location) => location.id === id)
 
     return (
-        <React.Fragment>
+        <main>
             {location.map((location) => (
                 <Carousel pictures={location.pictures} />
             ))}
-        </React.Fragment>
+        </main>
     )
 }
 

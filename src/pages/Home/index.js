@@ -1,4 +1,3 @@
-import React from 'react'
 import Banner from '../../components/Banner'
 import homeBannerImg from '../../images/home__banner.png'
 import Locations from '../../locations.json'
@@ -6,7 +5,7 @@ import LocationItem from '../../components/LocationItem'
 
 function Home() {
     return (
-        <React.Fragment>
+        <main>
             <Banner
                 image={homeBannerImg}
                 paragraphText="Chez vous, partout et ailleurs"
@@ -16,7 +15,7 @@ function Home() {
                     <LocationItem location={location} key={`${location.id}`} />
                 ))}
             </div>
-        </React.Fragment>
+        </main>
     )
 }
 

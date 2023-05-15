@@ -6,6 +6,7 @@ import Home from './pages/Home/index'
 import About from './pages/About'
 import Error from './components/Error/index'
 import Location from './pages/Location'
+import Footer from './components/Footer'
 import reportWebVitals from './reportWebVitals'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
@@ -20,6 +21,7 @@ root.render(
                 <Route path="*" element={<Error />} />
                 <Route path="/location/:id" element={<Location />} />
             </Routes>
+            <Footer />
         </Router>
     </React.StrictMode>
 )
