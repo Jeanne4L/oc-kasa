@@ -1,0 +1,33 @@
+.collapse {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.collapse__title {
+    position: absolute;
+    padding: 8px;
+    width: 100%;
+    border-radius: 8px;
+    background-color: #ff6060;
+    display: flex;
+    justify-content: space-between;
+}
+.collapse__title p {
+    color: white;
+    margin: 0;
+    font-size: 0.9rem;
+}
+.collapse__title i {
+    color: white;
+}
+
+.collapse__text {
+    background-color: #f6f6f6;
+    padding: 45px 10px;
+    border-radius: 10px;
+}
+.collapse__text p {
+    color: #ff6060;
+    font-size: 0.8rem;
+    margin: 0;
+}
