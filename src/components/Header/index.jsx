@@ -6,8 +6,14 @@ function Header() {
         <header>
             <img src={logo} alt="Mot Kasa avec une maison à la place du a" />
             <nav>
-                <Link to="/">Accueil</Link>
-                <Link to="/about">À propos</Link>
+                <ul>
+                    <li>
+                        <Link to="/">Accueil</Link>
+                    </li>
+                    <li>
+                        <Link to="/about">À propos</Link>
+                    </li>
+                </ul>
             </nav>
         </header>
     )

@@ -1,13 +1,9 @@
-function Banner({ backgroundImage, paragraphText }) {
+import styles from '../../styles/banner.module.css'
+
+function Banner({ image, paragraphText }) {
     return (
-        <div
-            className="banner"
-            style={{
-                backgroundImage: `url(${backgroundImage})`,
-                width: '300px',
-                height: '300px',
-            }}
-        >
+        <div className={styles.banner}>
+            <img src={image} alt="paysage" />
             {paragraphText && <p>{paragraphText}</p>}
         </div>
     )

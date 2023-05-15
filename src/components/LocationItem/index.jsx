@@ -1,9 +1,14 @@
+import { Link } from 'react-router-dom'
+import styles from '../../styles/card.module.css'
+
 function LocationItem({ location }) {
     return (
-        <figure>
-            <img src={location.cover} alt={location.title} />
-            <figcaption>{location.title}</figcaption>
-        </figure>
+        <Link to={`/location/${location.id}`} className={styles.link}>
+            <figure className={styles.card}>
+                <img src={location.cover} alt={location.title} />
+                <figcaption>{location.title}</figcaption>
+            </figure>
+        </Link>
     )
 }
 

@@ -5,6 +5,7 @@ import Header from './components/Header'
 import Home from './pages/Home/index'
 import About from './pages/About'
 import Error from './components/Error/index'
+import Location from './pages/Location'
 import reportWebVitals from './reportWebVitals'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
@@ -17,6 +18,7 @@ root.render(
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
                 <Route path="*" element={<Error />} />
+                <Route path="/location/:id" element={<Location />} />
             </Routes>
         </Router>
     </React.StrictMode>
