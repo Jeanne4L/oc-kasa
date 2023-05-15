@@ -33,3 +33,24 @@
     );
     color: white;
 }
+
+@media (min-width: 900px) {
+    .card_container {
+        width: 100%;
+        background-color: #f6f6f6;
+        border-radius: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 35px;
+    }
+    .link {
+        width: 31%;
+    }
+    .card {
+        height: 300px;
+    }
+    .card figcaption {
+        padding: 15px;
+    }
+}

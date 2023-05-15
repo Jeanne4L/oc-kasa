@@ -1,7 +1,8 @@
 import Banner from '../../components/Banner'
 import homeBannerImg from '../../images/home__banner.png'
 import Locations from '../../locations.json'
-import LocationItem from '../../components/LocationItem'
+import Card from '../../components/Card'
+import styles from '../../styles/card.module.css'
 
 function Home() {
     return (
@@ -10,9 +11,9 @@ function Home() {
                 image={homeBannerImg}
                 paragraphText="Chez vous, partout et ailleurs"
             />
-            <div className="locations">
+            <div className={styles.card_container}>
                 {Locations.map((location) => (
-                    <LocationItem location={location} key={`${location.id}`} />
+                    <Card location={location} key={`${location.id}`} />
                 ))}
             </div>
         </main>

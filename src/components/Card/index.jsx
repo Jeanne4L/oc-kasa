@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import styles from '../../styles/card.module.css'
 
-function LocationItem({ location }) {
+function Card({ location }) {
     return (
         <Link to={`/location/${location.id}`} className={styles.link}>
             <figure className={styles.card}>
@@ -12,4 +12,4 @@ function LocationItem({ location }) {
     )
 }
 
-export default LocationItem
+export default Card
