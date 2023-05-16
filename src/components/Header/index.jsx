@@ -2,7 +2,7 @@ import { Link, useLocation } from 'react-router-dom'
 import logo from '../../images/logo.png'
 
 function Header() {
-    let location = useLocation()
+    let url = useLocation()
     return (
         <header>
             <div className="container">
@@ -15,9 +15,7 @@ function Header() {
                         <li>
                             <Link
                                 to="/"
-                                className={
-                                    location.pathname === '/' ? 'active' : ''
-                                }
+                                className={url.pathname === '/' ? 'active' : ''}
                             >
                                 Accueil
                             </Link>
@@ -26,9 +24,7 @@ function Header() {
                             <Link
                                 to="/about"
                                 className={
-                                    location.pathname === '/about'
-                                        ? 'active'
-                                        : ''
+                                    url.pathname === '/about' ? 'active' : ''
                                 }
                             >
                                 À propos

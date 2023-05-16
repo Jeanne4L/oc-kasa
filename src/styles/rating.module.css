@@ -1,0 +1,18 @@
+.full_star {
+    color: #ff6060;
+}
+.empty_star {
+    color: #e3e3e3;
+}
+
+.star {
+    font-size: 0.8rem;
+    margin-right: 5px;
+}
+
+@media (min-width: 900px) {
+    .star {
+        font-size: 1.2rem;
+        margin: 0 0 0 10px;
+    }
+}
