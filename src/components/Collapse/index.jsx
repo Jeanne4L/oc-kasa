@@ -1,28 +1,48 @@
+import { useState } from 'react'
+import { useLocation } from 'react-router-dom'
 import styles from '../../styles/collapse.module.css'
-import aboutStyles from '../../styles/about.module.css'
 
 function Collapse({ title, paragraphText, list }) {
+    let url = useLocation()
+
+    const [open, setOpen] = useState(false)
+    const [btnUp, setBtnUp] = useState(false)
+
+    function toggle() {
+        setOpen(!open)
+        setBtnUp(!btnUp)
+    }
+
     return (
-        <div className={`${styles.collapse} ${aboutStyles.collapse}`}>
-            <div
-                className={`${styles.collapse__title} ${aboutStyles.collapse_title}`}
-            >
+        <div
+            className={`${styles.collapse} ${
+                url.pathname === '/about'
+                    ? styles.about_collapse
+                    : styles.renting_collapse
+            }`}
+        >
+            <div className={`${styles.collapse__title}`}>
                 <p>{title}</p>
-                <i className="fa-solid fa-chevron-up"></i>
-                <i className="fa-solid fa-chevron-down"></i>
+                <i
+                    className={`fa-solid fa-chevron-down ${
+                        styles.collapse_btn
+                    } ${btnUp ? styles.btn_up : ''}`}
+                    onClick={toggle}
+                ></i>
             </div>
-            <div
-                className={`${styles.collapse__text} ${aboutStyles.collapse_text}`}
-            >
-                {paragraphText && <p>{paragraphText}</p>}
-                {list && (
-                    <ul>
-                        {list.map((listItem, index) => (
-                            <li key={`${listItem}-${index}`}>{listItem}</li>
-                        ))}
-                    </ul>
-                )}
-            </div>
+
+            {open && (
+                <div className={`${styles.collapse__text}`}>
+                    {paragraphText && <p>{paragraphText}</p>}
+                    {list && (
+                        <ul>
+                            {list.map((listItem, index) => (
+                                <li key={`${listItem}-${index}`}>{listItem}</li>
+                            ))}
+                        </ul>
+                    )}
+                </div>
+            )}
         </div>
     )
 }

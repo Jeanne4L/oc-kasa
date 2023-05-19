@@ -4,7 +4,7 @@
 }
 
 .collapse__title {
-    position: absolute;
+    position: relative;
     padding: 8px;
     width: 100%;
     border-radius: 8px;
@@ -21,12 +21,24 @@
 .collapse__title i {
     color: white;
 }
+.collapse_btn {
+    transition: transform 0.3s ease-out;
+}
+.btn_up {
+    transform: rotate(180deg);
+}
 
 .collapse__text {
     background-color: #f6f6f6;
     padding: 45px 10px;
     border-radius: 10px;
+    margin-top: -30px;
+    /* transform: scaleY(0);
+    transition: transform 1s ease-out; */
 }
+/* .opened_text {
+    transform: scaleY(100%);
+} */
 .collapse__text ul {
     margin: 0;
 }
@@ -40,15 +52,23 @@
 }
 
 @media (min-width: 900px) {
-    .collapse {
+    .about_collapse {
         width: 80%;
         margin: 0 auto 25px auto;
+    }
+    .renting_collapse {
+        width: 47%;
     }
     .collapse__text {
         padding: 55px 15px 20px 15px;
         min-height: 255px;
     }
-    .collapse__title p,
+    .collapse__title {
+        padding: 15px;
+    }
+    .collapse__title p {
+        font-size: 1rem;
+    }
     .collapse__text p,
     .collapse__text li {
         font-size: 1.2rem;

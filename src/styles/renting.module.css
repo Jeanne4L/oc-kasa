@@ -55,6 +55,7 @@ h2 {
     .name {
         font-size: 1rem;
         text-align: right;
+        max-width: 80px;
     }
     .host img {
         width: 60px;
@@ -63,17 +64,5 @@ h2 {
     .collapse_container {
         display: flex;
         justify-content: space-between;
-    }
-    .collapse {
-        width: 47%;
-        margin: 0;
-    }
-    .collapse_title {
-        padding: 12px;
-    }
-    .collapse_title p,
-    .collapse_text p,
-    .collapse_text li {
-        font-size: 1rem;
     }
 }

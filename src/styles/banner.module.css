@@ -1,10 +1,15 @@
 .banner {
     width: 100%;
-    height: 125px;
     position: relative;
     margin-bottom: 25px;
     border-radius: 10px;
     overflow: hidden;
+}
+.small_banner {
+    height: 115px;
+}
+.large_banner {
+    height: 200px;
 }
 .banner::before {
     content: '';

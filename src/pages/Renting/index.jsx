@@ -4,7 +4,7 @@ import Rentals from '../../rentals.json'
 import Tag from '../../components/Tag'
 import Rating from '../../components/Rating'
 import Collapse from '../../components/Collapse'
-import styles from '../../styles/about.module.css'
+import styles from '../../styles/renting.module.css'
 // import Carousel from '../../components/Carousel'
 
 function Renting() {
@@ -35,7 +35,7 @@ function Renting() {
 
                         <div
                             key={`rentingInfoContainer-${renting.id}`}
-                            class={styles.info_container}
+                            className={styles.info_container}
                         >
                             <Rating renting={renting} />
                             <div className={styles.host}>
