@@ -5,7 +5,7 @@ import Tag from '../../components/Tag'
 import Rating from '../../components/Rating'
 import Collapse from '../../components/Collapse'
 import styles from '../../styles/renting.module.css'
-// import Carousel from '../../components/Carousel'
+import Carousel from '../../components/Carousel'
 
 function Renting() {
     const { id } = useParams()
@@ -14,8 +14,8 @@ function Renting() {
     return (
         <main>
             {renting.map((renting) => (
-                // <Carousel pictures={renting.pictures} />
                 <React.Fragment key={`rentingContainer-${renting.id}`}>
+                    <Carousel pictures={renting.pictures} />
                     <div className={styles.presentation}>
                         <div className={styles.titles}>
                             <h1 key={`${renting.title}-${renting.id}`}>

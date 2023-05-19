@@ -25,7 +25,7 @@ main,
     margin: auto;
 }
 main {
-    margin-top: 120px;
+    margin-top: 90px;
 }
 
 .active {
@@ -84,7 +84,7 @@ footer p {
         width: 85%;
     }
     main {
-        margin-top: 150px;
+        margin-top: 120px;
     }
     header img {
         width: 200px;

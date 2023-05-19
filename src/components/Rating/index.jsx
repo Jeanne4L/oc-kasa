@@ -1,8 +1,8 @@
 import styles from '../../styles/rating.module.css'
 
 function Rating({ renting }) {
-    const empty = Array(5).fill(<i className="fa-solid fa-star"></i>)
-    const full = Array(5).fill(<i className="fa-solid fa-star"></i>)
+    const empty = Array(5).fill(<i className="ri-star-fill"></i>)
+    const full = Array(5).fill(<i className="ri-star-fill"></i>)
 
     return (
         <div>
