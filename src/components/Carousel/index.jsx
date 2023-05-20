@@ -25,7 +25,7 @@ function Carousel({ pictures }) {
                             onClick={() => setCount(count - 1)}
                         ></i>
                         <i
-                            class={`ri-arrow-right-s-line ${styles.next} ${styles.nav_btn}`}
+                            className={`ri-arrow-right-s-line ${styles.next} ${styles.nav_btn}`}
                             onClick={() => setCount(count + 1)}
                         ></i>
                         <span className={styles.picture_nb}>
