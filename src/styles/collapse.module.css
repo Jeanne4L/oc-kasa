@@ -40,10 +40,17 @@
 .collapse__text p,
 .collapse__text li {
     color: #ff6060;
-    font-size: 0.8rem;
     margin: 0;
     font-weight: 400;
     line-height: 1.5rem;
+}
+.about_collapse .collapse__text p,
+.about_collapse .collapse__text li {
+    font-size: clamp(0.8rem, 0.425rem + 1.2vw, 1.1rem);
+}
+.renting_collapse .collapse__text p,
+.renting_collapse .collapse__text li {
+    font-size: clamp(0.8rem, 0.7273rem + 0.3636vw, 1rem);
 }
 
 @media (min-width: 900px) {
@@ -58,16 +65,12 @@
         min-height: 315px;
     }
     .collapse__text {
-        padding: 55px 15px 20px 15px;
+        padding: 50px 15px 20px 15px;
     }
     .collapse__title {
         padding: 15px;
     }
     .collapse__title p {
-        font-size: 1rem;
-    }
-    .collapse__text p,
-    .collapse__text li {
         font-size: 1rem;
     }
 }
