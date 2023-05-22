@@ -18,6 +18,7 @@ function Carousel({ pictures }) {
             <div className={styles.carousel}>
                 <img src={pictures[count - 1]} alt="logement" />
 
+                {/* Buttons and navigation are displayed if carousel have more than one picture */}
                 {pictures.length > 1 && (
                     <div>
                         <i

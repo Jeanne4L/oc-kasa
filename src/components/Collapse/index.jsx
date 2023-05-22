@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useLocation } from 'react-router-dom'
-import styles from '../../styles/collapse.module.css'
+import styles from './styles.module.css'
 
 function Collapse({ title, paragraphText, list }) {
     let url = useLocation()
@@ -33,6 +33,7 @@ function Collapse({ title, paragraphText, list }) {
 
             {open && (
                 <div className={`${styles.collapse__text}`}>
+                    {/* This part can have a paragraph or a list */}
                     {paragraphText && <p>{paragraphText}</p>}
                     {list && (
                         <ul>

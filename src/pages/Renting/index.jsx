@@ -66,6 +66,7 @@ function Renting() {
             </main>
         )
     } else {
+        // If the id in the url is wrong, this redirects to the 404 page
         return <Navigate to={'*'} />
     }
 }

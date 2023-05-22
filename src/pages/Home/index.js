@@ -2,7 +2,7 @@ import Banner from '../../components/Banner'
 import homeBannerImg from '../../images/home__banner.png'
 import Rentals from '../../rentals.json'
 import Card from '../../components/Card'
-import styles from '../../styles/card.module.css'
+import styles from '../../components/Card/styles.module.css'
 
 function Home() {
     return (
