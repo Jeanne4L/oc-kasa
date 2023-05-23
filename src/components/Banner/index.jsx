@@ -6,7 +6,7 @@ function Banner({ image, paragraphText }) {
     return (
         <div
             className={`${styles.banner}
-        ${url.pathname === '/' ? styles.small_banner : styles.large_banner}`}
+        ${url.pathname === '/' ? styles.home_banner : styles.about_banner}`}
         >
             <img src={image} alt="paysage" />
             {/* This component can have a paragraph */}

@@ -22,7 +22,10 @@
     color: white;
 }
 .collapse_btn {
-    transition: transform 0.3s ease-out;
+    transition: transform 0.4s ease-out;
+}
+.collapse_btn:hover {
+    cursor: pointer;
 }
 .btn_up {
     transform: rotate(180deg);

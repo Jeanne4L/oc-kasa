@@ -18,7 +18,7 @@ function Carousel({ pictures }) {
             <div className={styles.carousel}>
                 <img src={pictures[count - 1]} alt="logement" />
 
-                {/* Buttons and navigation are displayed if carousel have more than one picture */}
+                {/* Buttons and numbering are displayed if carousel have more than one picture */}
                 {pictures.length > 1 && (
                     <div>
                         <i
@@ -29,7 +29,7 @@ function Carousel({ pictures }) {
                             className={`ri-arrow-right-s-line ${styles.next} ${styles.nav_btn}`}
                             onClick={() => setCount(count + 1)}
                         ></i>
-                        <span className={styles.picture_nb}>
+                        <span className={styles.numbering}>
                             {count}/{pictures.length}
                         </span>
                     </div>

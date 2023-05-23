@@ -1,6 +1,6 @@
 import Banner from '../../components/Banner'
 import homeBannerImg from '../../images/home__banner.png'
-import Rentals from '../../rentals.json'
+import Rentals from '../../data/rentals.json'
 import Card from '../../components/Card'
 import styles from '../../components/Card/styles.module.css'
 

@@ -1,6 +1,6 @@
 import React from 'react'
 import { useParams, Navigate } from 'react-router-dom'
-import Rentals from '../../rentals.json'
+import Rentals from '../../data/rentals.json'
 import Tag from '../../components/Tag'
 import Rating from '../../components/Rating'
 import Collapse from '../../components/Collapse'

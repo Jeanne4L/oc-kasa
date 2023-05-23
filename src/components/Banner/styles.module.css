@@ -5,10 +5,10 @@
     border-radius: 10px;
     overflow: hidden;
 }
-.small_banner {
+.home_banner {
     height: 115px;
 }
-.large_banner {
+.about_banner {
     height: 200px;
 }
 .banner::before {
