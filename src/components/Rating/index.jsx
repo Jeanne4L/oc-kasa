@@ -1,6 +1,6 @@
 import styles from './styles.module.css'
 
-function Rating({ renting }) {
+function Rating(props) {
     // Scoring arrays
     const empty = Array(5).fill(<i className="ri-star-fill"></i>)
     const full = Array(5).fill(<i className="ri-star-fill"></i>)
@@ -8,7 +8,7 @@ function Rating({ renting }) {
     return (
         <div>
             {/* This displays the full stars corresponding to the score of the rental */}
-            {full.slice(5 - renting.rating).map((fullStar, index) => (
+            {full.slice(5 - props.renting.rating).map((fullStar, index) => (
                 <span
                     key={index}
                     className={`${styles.star} ${styles.full_star}`}
@@ -17,7 +17,7 @@ function Rating({ renting }) {
                 </span>
             ))}
             {/* This completes the score up to 5 with empty stars */}
-            {empty.slice(renting.rating).map((emptyStar, index) => (
+            {empty.slice(props.renting.rating).map((emptyStar, index) => (
                 <span
                     key={index}
                     className={`${styles.star} ${styles.empty_star}`}

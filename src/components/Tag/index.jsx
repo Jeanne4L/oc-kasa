@@ -1,9 +1,9 @@
 import styles from './styles.module.css'
 
-function Tag({ tags }) {
+function Tag(props) {
     return (
         <div className={styles.tags}>
-            {tags.map((tag, index) => (
+            {props.tags.map((tag, index) => (
                 <li key={`${tag}-${index}`} className={styles.tag}>
                     {tag}
                 </li>

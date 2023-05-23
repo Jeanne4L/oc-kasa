@@ -1,25 +1,25 @@
 import { useState, React } from 'react'
 import styles from './styles.module.css'
 
-function Carousel({ pictures }) {
+function Carousel(props) {
     const [count, setCount] = useState(1)
 
     function limitCount() {
-        if (count > pictures.length) {
+        if (count > props.pictures.length) {
             setCount(1)
         } else if (count < 1) {
-            setCount(pictures.length)
+            setCount(props.pictures.length)
         }
     }
     limitCount()
 
-    for (let i = 0; i < pictures.length; i++) {
+    for (let i = 0; i < props.pictures.length; i++) {
         return (
             <div className={styles.carousel}>
-                <img src={pictures[count - 1]} alt="logement" />
+                <img src={props.pictures[count - 1]} alt="logement" />
 
                 {/* Buttons and numbering are displayed if carousel have more than one picture */}
-                {pictures.length > 1 && (
+                {props.pictures.length > 1 && (
                     <div>
                         <i
                             className={`ri-arrow-left-s-line ${styles.back} ${styles.nav_btn}`}
@@ -30,7 +30,7 @@ function Carousel({ pictures }) {
                             onClick={() => setCount(count + 1)}
                         ></i>
                         <span className={styles.numbering}>
-                            {count}/{pictures.length}
+                            {count}/{props.pictures.length}
                         </span>
                     </div>
                 )}
