@@ -31,8 +31,12 @@ function Collapse({ title, paragraphText, list }) {
                 ></i>
             </div>
 
-            {open && (
-                <div className={styles.collapse__text}>
+            <div
+                className={`${styles.collapse__text} ${
+                    open ? styles.down : ''
+                }`}
+            >
+                <div className={styles.collapse__content}>
                     {/* This part can have a paragraph or a list */}
                     {paragraphText && <p>{paragraphText}</p>}
                     {list && (
@@ -43,7 +47,7 @@ function Collapse({ title, paragraphText, list }) {
                         </ul>
                     )}
                 </div>
-            )}
+            </div>
         </div>
     )
 }

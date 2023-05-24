@@ -33,8 +33,17 @@
 
 .collapse__text {
     background-color: #f6f6f6;
-    padding: 45px 10px;
     border-radius: 10px;
+    margin-top: -30px;
+    max-height: 30px;
+    overflow: hidden;
+    transition: max-height 0.7s ease, min-height 0.7s ease;
+}
+.collapse__content {
+    padding: 45px 10px;
+}
+.down {
+    max-height: 500px;
     margin-top: -30px;
 }
 .collapse__text ul {
@@ -65,10 +74,10 @@
         width: 47%;
     }
     .renting_collapse .collapse__text {
-        min-height: 315px;
+        min-height: 0;
     }
-    .collapse__text {
-        padding: 50px 15px 20px 15px;
+    .renting_collapse .down {
+        min-height: 315px;
     }
     .collapse__title {
         padding: 15px;
