@@ -6,10 +6,13 @@ function Header() {
     return (
         <header>
             <div className="container">
-                <img
-                    src={logo}
-                    alt="Mot Kasa avec une maison à la place du a"
-                />
+                <Link to="/">
+                    <img
+                        src={logo}
+                        alt="Mot Kasa avec une maison à la place du a"
+                    />
+                </Link>
+
                 <nav>
                     <ul>
                         <li>
