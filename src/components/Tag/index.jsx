@@ -1,5 +1,12 @@
 import styles from './styles.module.css'
 
+/**
+ * @component
+ * @param {*} props
+ * @param {number} props.tags - rental tags
+ * @returns {JSX.Element} - rental tag
+ */
+
 function Tag(props) {
     return (
         <div className={styles.tags}>

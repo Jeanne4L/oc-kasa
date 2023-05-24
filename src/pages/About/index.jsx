@@ -2,6 +2,11 @@ import Banner from '../../components/Banner'
 import aboutBannerImg from '../../images/about__banner.png'
 import Collapse from '../../components/Collapse'
 
+/**
+ *
+ * @returns {JSX.Element} - about page
+ */
+
 function About() {
     return (
         <main>

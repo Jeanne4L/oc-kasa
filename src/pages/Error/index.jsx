@@ -1,6 +1,11 @@
 import { Link } from 'react-router-dom'
 import styles from './styles.module.css'
 
+/**
+ *
+ * @returns {JSX.Element} - 404 page
+ */
+
 function Error() {
     return (
         <section className={styles.error}>

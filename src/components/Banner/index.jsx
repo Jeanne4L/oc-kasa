@@ -1,6 +1,14 @@
 import { useLocation } from 'react-router-dom'
 import styles from './styles.module.css'
 
+/**
+ * @component
+ * @param {*} props
+ * @param {string} props.image - background image source
+ * @param {string} [props.paragraphText] - business slogan
+ * @returns
+ */
+
 function Banner(props) {
     let url = useLocation()
     return (

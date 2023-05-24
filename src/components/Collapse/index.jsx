@@ -2,7 +2,16 @@ import { useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import styles from './styles.module.css'
 
-function Collapse({ title, paragraphText, list }) {
+/**
+ * @component
+ * @param {*} props
+ * @param {string} props.title - rental title
+ * @param {string} [props.paragraphText] - collapse description
+ * @param {Array<string>} [props.list] - rental available equipment
+ * @returns {JSX.Element} - collapsible element
+ */
+
+function Collapse(props) {
     let url = useLocation()
 
     const [open, setOpen] = useState(false)
@@ -18,11 +27,11 @@ function Collapse({ title, paragraphText, list }) {
             className={`${styles.collapse} ${
                 url.pathname === '/about'
                     ? styles.about_collapse
-                    : styles.renting_collapse
+                    : styles.rental_collapse
             }`}
         >
             <div className={`${styles.collapse__title}`}>
-                <p>{title}</p>
+                <p>{props.title}</p>
                 <i
                     className={`fa-solid fa-chevron-down ${
                         styles.collapse_btn
@@ -38,10 +47,10 @@ function Collapse({ title, paragraphText, list }) {
             >
                 <div className={styles.collapse__content}>
                     {/* This part can have a paragraph or a list */}
-                    {paragraphText && <p>{paragraphText}</p>}
-                    {list && (
+                    {props.paragraphText && <p>{props.paragraphText}</p>}
+                    {props.list && (
                         <ul>
-                            {list.map((listItem, index) => (
+                            {props.list.map((listItem, index) => (
                                 <li key={`${listItem}-${index}`}>{listItem}</li>
                             ))}
                         </ul>

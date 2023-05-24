@@ -1,6 +1,13 @@
 import { useState, React } from 'react'
 import styles from './styles.module.css'
 
+/**
+ * @component
+ * @param {*} props
+ * @param {Array<string>} props.pictures - rental images sources
+ * @returns {JSX.Element} - image carousel
+ */
+
 function Carousel(props) {
     const [count, setCount] = useState(1)
 

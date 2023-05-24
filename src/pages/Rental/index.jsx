@@ -4,48 +4,53 @@ import Rentals from '../../data/rentals.json'
 import Tag from '../../components/Tag'
 import Rating from '../../components/Rating'
 import Collapse from '../../components/Collapse'
-import styles from '../../styles/renting.module.css'
+import styles from '../../styles/rental.module.css'
 import Carousel from '../../components/Carousel'
 
-function Renting() {
-    const { id } = useParams()
-    const renting = Rentals.filter((renting) => renting.id === id)
+/**
+ *
+ * @returns {JSX.Element} - rental page
+ */
 
-    if (renting.length > 0) {
+function Rental() {
+    const { id } = useParams()
+    const rental = Rentals.filter((rental) => rental.id === id)
+
+    if (rental.length > 0) {
         return (
             <main>
-                {renting.map((renting) => (
-                    <React.Fragment key={`rentingContainer-${renting.id}`}>
-                        <Carousel pictures={renting.pictures} />
+                {rental.map((rental) => (
+                    <React.Fragment key={`rentalContainer-${rental.id}`}>
+                        <Carousel pictures={rental.pictures} />
                         <div className={styles.presentation}>
                             <div className={styles.titles}>
-                                <h1 key={`${renting.title}-${renting.id}`}>
-                                    {renting.title}
+                                <h1 key={`${rental.title}-${rental.id}`}>
+                                    {rental.title}
                                 </h1>
-                                <h2 key={`${renting.location}-${renting.id}`}>
-                                    {renting.location}
+                                <h2 key={`${rental.location}-${rental.id}`}>
+                                    {rental.location}
                                 </h2>
 
                                 <div
                                     className="tags"
-                                    key={`tagsContainer-${renting.id}`}
+                                    key={`tagsContainer-${rental.id}`}
                                 >
-                                    <Tag tags={renting.tags} />
+                                    <Tag tags={rental.tags} />
                                 </div>
                             </div>
 
                             <div
-                                key={`rentingInfoContainer-${renting.id}`}
+                                key={`rentalInfoContainer-${rental.id}`}
                                 className={styles.info_container}
                             >
-                                <Rating renting={renting} />
+                                <Rating rental={rental} />
                                 <div className={styles.host}>
                                     <p className={styles.name}>
-                                        {renting.host.name}
+                                        {rental.host.name}
                                     </p>
                                     <img
-                                        src={renting.host.picture}
-                                        alt={renting.host.name}
+                                        src={rental.host.picture}
+                                        alt={rental.host.name}
                                     />
                                 </div>
                             </div>
@@ -54,11 +59,11 @@ function Renting() {
                         <div className={styles.collapse_container}>
                             <Collapse
                                 title={'Description'}
-                                paragraphText={renting.description}
+                                paragraphText={rental.description}
                             />
                             <Collapse
                                 title={'Équipements'}
-                                list={renting.equipments}
+                                list={rental.equipments}
                             />
                         </div>
                     </React.Fragment>
@@ -71,4 +76,4 @@ function Renting() {
     }
 }
 
-export default Renting
+export default Rental
