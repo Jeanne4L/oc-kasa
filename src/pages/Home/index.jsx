@@ -12,9 +12,14 @@ import styles from '../../components/Card/styles.module.css'
 function Home() {
     return (
         <main>
-            <Banner
+            {/* <Banner
                 image={homeBannerImg}
                 paragraphText="Chez vous, partout et ailleurs"
+            /> */}
+            <Banner
+                image={homeBannerImg}
+                firstParagraphText="Chez vous,"
+                secondParagraphText="partout et ailleurs"
             />
             <div className={styles.card_container}>
                 {Rentals.map((rental) => (

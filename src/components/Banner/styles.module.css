@@ -25,12 +25,18 @@
     height: 100%;
 }
 .banner p {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    margin: 0 15px;
     color: white;
     font-size: clamp(1.5rem, 1.1364rem + 1.8182vw, 2.5rem);
+    margin: 0;
+}
+.banner p:first-of-type {
+    margin-right: 7px;
+}
+.banner__text {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);  
+    margin: 0 15px;
 }
 
 @media (min-width: 900px) {
@@ -38,8 +44,11 @@
         height: 200px;
         border-radius: 20px;
     }
-    .banner p {
-        width: 100%;
-        text-align: center;
+    .home_banner {
+        display: flex;
+        justify-content: center;
+    }
+    .banner__text {
+        display: flex;
     }
 }

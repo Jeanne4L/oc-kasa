@@ -17,8 +17,13 @@ function Banner(props) {
         ${url.pathname === '/' ? styles.home_banner : styles.about_banner}`}
         >
             <img src={props.image} alt="paysage" />
-            {/* This component can have a paragraph */}
-            {props.paragraphText && <p>{props.paragraphText}</p>}
+            {/* This component can contain text */}
+            {props.firstParagraphText && 
+                <div className={styles.banner__text}>
+                    <p>{props.firstParagraphText}</p>
+                    <p>{props.secondParagraphText}</p>
+                </div>
+            }
         </div>
     )
 }
