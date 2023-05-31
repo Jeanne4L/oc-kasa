@@ -28,14 +28,17 @@ function Carousel(props) {
                 {/* Buttons and numbering are displayed if carousel have more than one picture */}
                 {props.pictures.length > 1 && (
                     <div>
-                        <i
-                            className={`ri-arrow-left-s-line ${styles.back} ${styles.nav_btn}`}
-                            onClick={() => setCount(count - 1)}
-                        ></i>
-                        <i
-                            className={`ri-arrow-right-s-line ${styles.next} ${styles.nav_btn}`}
+                        <span className={`material-symbols-outlined ${styles.back} ${styles.nav_btn}`}
+                            onClick={() => setCount(count - 1)}>
+                            arrow_back_ios_new
+                        </span>
+
+                        <span className={`material-symbols-outlined ${styles.next} ${styles.nav_btn}`}
                             onClick={() => setCount(count + 1)}
-                        ></i>
+                        >
+                            arrow_forward_ios
+                        </span>
+                        
                         <span className={styles.numbering}>
                             {count}/{props.pictures.length}
                         </span>

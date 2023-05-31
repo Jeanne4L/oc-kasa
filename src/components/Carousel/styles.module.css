@@ -32,12 +32,25 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    font-size: clamp(2.5rem, -0.2273rem + 13.6364vw, 10rem);
+    font-size: clamp(1.5rem, 0.2273rem + 6.3636vw, 5rem);
     color: white;
+
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 600,
+    'GRAD' 0,
+    'opsz' 48
 }
 .nav_btn:hover {
     cursor: pointer;
 }
+/* .material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 600,
+    'GRAD' 0,
+    'opsz' 48
+} */
 .back {
     left: 0;
 }
