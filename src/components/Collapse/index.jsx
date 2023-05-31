@@ -32,12 +32,16 @@ function Collapse(props) {
         >
             <div className={`${styles.collapse__title}`}>
                 <p>{props.title}</p>
-                <i
+                <i className={`fa-solid fa-chevron-up 
+                    ${styles.collapse_btn} ${btnUp ? styles.btn_up : ''}`} 
+                    onClick={toggle}>
+                </i>
+                {/* <i
                     className={`fa-solid fa-chevron-down ${
                         styles.collapse_btn
                     } ${btnUp ? styles.btn_up : ''}`}
                     onClick={toggle}
-                ></i>
+                ></i> */}
             </div>
 
             <div

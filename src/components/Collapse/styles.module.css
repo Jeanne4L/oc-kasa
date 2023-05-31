@@ -5,7 +5,7 @@
 
 .collapse__title {
     position: relative;
-    padding: 8px;
+    padding: 8px 10px;
     width: 100%;
     border-radius: 8px;
     background-color: #ff6060;
@@ -23,12 +23,13 @@
 }
 .collapse_btn {
     transition: transform 0.4s ease-out;
+    font-size: 1.1rem;
 }
 .collapse_btn:hover {
     cursor: pointer;
 }
 .btn_up {
-    transform: rotate(180deg);
+    transform: rotate(-180deg);
 }
 
 .collapse__text {
@@ -84,5 +85,8 @@
     }
     .collapse__title p {
         font-size: 1rem;
+    }
+    .collapse_btn {
+        font-size: 1.5rem;
     }
 }

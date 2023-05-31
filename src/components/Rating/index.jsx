@@ -9,8 +9,8 @@ import styles from './styles.module.css'
 
 function Rating(props) {
     // Scoring arrays
-    const empty = Array(5).fill(<i className="ri-star-fill"></i>)
-    const full = Array(5).fill(<i className="ri-star-fill"></i>)
+    const empty = Array(5).fill(<i className="fa-solid fa-star"></i>)
+    const full = Array(5).fill(<i className="fa-solid fa-star"></i>)
 
     return (
         <div>
