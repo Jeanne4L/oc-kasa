@@ -14,6 +14,10 @@ Kasa uses:
 -   [React]
 -   [node.js]
 
+## Website
+
+  https://oc-kasa-jeanne4l.netlify.app/
+
 ## Installation
 
 Kasa requires [Node.js](https://nodejs.org/) v10+ to run.
