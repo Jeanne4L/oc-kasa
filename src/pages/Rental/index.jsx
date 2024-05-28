@@ -4,7 +4,7 @@ import Rentals from '../../data/rentals.json'
 import Tag from '../../components/Tag'
 import Rating from '../../components/Rating'
 import Collapse from '../../components/Collapse'
-import styles from '../../styles/rental.module.css'
+import styles from './rental.module.css'
 import Carousel from '../../components/Carousel'
 
 /**
@@ -27,7 +27,10 @@ function Rental() {
                                 <h1 key={`${rental.title}-${rental.id}`}>
                                     {rental.title}
                                 </h1>
-                                <h2 key={`${rental.location}-${rental.id}`}>
+                                <h2
+                                    className={styles.location_title}
+                                    key={`${rental.location}-${rental.id}`}
+                                >
                                     {rental.location}
                                 </h2>
 

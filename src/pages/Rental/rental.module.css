@@ -1,5 +1,5 @@
 h1,
-h2,
+h2:not(.location_title),
 .name {
     color: #ff6060;
 }
