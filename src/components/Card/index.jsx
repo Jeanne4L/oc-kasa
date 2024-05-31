@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
-import styles from './styles.module.css'
+
+import styles from './styles.module.scss'
 
 /**
  * @component
@@ -11,14 +12,14 @@ import styles from './styles.module.css'
  */
 
 function Card(props) {
-    return (
-        <Link to={`/rental/${props.rental.id}`} className={styles.link}>
-            <figure className={styles.card}>
-                <img src={props.rental.cover} alt={props.rental.title} />
-                <figcaption>{props.rental.title}</figcaption>
-            </figure>
-        </Link>
-    )
+  return (
+    <Link to={`/rental/${props.rental.id}`} className={styles.link}>
+      <figure className={styles.card}>
+        <img src={props.rental.cover} alt={props.rental.title} />
+        <figcaption>{props.rental.title}</figcaption>
+      </figure>
+    </Link>
+  )
 }
 
 export default Card
