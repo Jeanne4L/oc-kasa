@@ -41,6 +41,8 @@ main {
 
 .active {
     text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
 }
 
 header {
@@ -62,7 +64,7 @@ header img {
     height: 50px;
 }
 header a {
-    color: #ff6060;
+    color: #000;
 }
 header ul {
     display: flex;
@@ -81,12 +83,11 @@ footer {
 footer .container {
     text-align: center;
 }
-footer img {
-    width: 100px;
-}
 footer p {
     color: white;
     font-size: 0.8rem;
+    width: 150px;
+    margin: 10px auto;
 }
 
 @media (min-width: 900px) {
@@ -104,5 +105,10 @@ footer p {
     header li {
         margin-left: 40px;
         text-transform: capitalize;
+    }
+    footer p {
+        font-size: 1.3rem;
+        width: 100%;
+        margin-top: 50px;
     }
 }

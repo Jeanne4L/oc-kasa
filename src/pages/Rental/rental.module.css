@@ -1,5 +1,5 @@
 h1,
-h2,
+h2:not(.location_title),
 .name {
     color: #ff6060;
 }
@@ -61,7 +61,7 @@ h2 {
         width: 60px;
         height: 60px;
     }
-    .collapse_container {
+    .dropdown_container {
         display: flex;
         justify-content: space-between;
     }
