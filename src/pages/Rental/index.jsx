@@ -3,7 +3,7 @@ import { useParams, Navigate } from 'react-router-dom'
 import Rentals from '../../data/rentals.json'
 import Tag from '../../components/Tag'
 import Rating from '../../components/Rating'
-import Collapse from '../../components/Collapse'
+import Dropdown from '../../components/Dropdown'
 import styles from './rental.module.css'
 import Carousel from '../../components/Carousel'
 
@@ -59,12 +59,12 @@ function Rental() {
                             </div>
                         </div>
 
-                        <div className={styles.collapse_container}>
-                            <Collapse
+                        <div className={styles.dropdown_container}>
+                            <Dropdown
                                 title={'Description'}
                                 paragraphText={rental.description}
                             />
-                            <Collapse
+                            <Dropdown
                                 title={'Équipements'}
                                 list={rental.equipments}
                             />

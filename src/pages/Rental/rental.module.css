@@ -61,7 +61,7 @@ h2 {
         width: 60px;
         height: 60px;
     }
-    .collapse_container {
+    .dropdown_container {
         display: flex;
         justify-content: space-between;
     }
