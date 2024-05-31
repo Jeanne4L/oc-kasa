@@ -1,0 +1,114 @@
+.dropdown {
+  margin-bottom: 25px;
+  position: relative;
+
+  &__title {
+    position: relative;
+    padding: 8px 10px;
+    width: 100%;
+    border-radius: 8px;
+    background-color: #ff6060;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    p {
+      margin: 0;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    i,
+    p {
+      color: white;
+    }
+  }
+
+  &__btn {
+    transition: transform 0.4s ease-out;
+    font-size: 1.1rem;
+    cursor: pointer;
+  }
+
+  &__text {
+    background-color: #f6f6f6;
+    border-radius: 10px;
+    margin-top: -30px;
+    max-height: 30px;
+    overflow: hidden;
+    transition: max-height 0.7s ease, min-height 0.7s ease;
+
+    ul {
+      margin: 0;
+    }
+
+    p,
+    li {
+      margin: 0;
+      font-weight: 400;
+      line-height: 1.5rem;
+    }
+  }
+
+  &__content {
+    padding: 45px 10px;
+  }
+}
+
+.btn_up {
+  transform: rotate(-180deg);
+}
+
+.down {
+  max-height: 500px;
+  margin-top: -30px;
+}
+
+.about_dropdown {
+  .dropdown__text {
+    p,
+    li {
+      font-size: clamp(0.8rem, 0.425rem + 1.2vw, 1.1rem);
+    }
+  }
+}
+
+.rental_dropdown {
+  .dropdown__text {
+    p,
+    li {
+      font-size: clamp(0.8rem, 0.7273rem + 0.3636vw, 1rem);
+    }
+  }
+}
+
+@media (min-width: 900px) {
+  .about_dropdown {
+    width: 80%;
+    margin: 0 auto 25px auto;
+  }
+
+  .rental_dropdown {
+    width: 47%;
+
+    .dropdown__text {
+      min-height: 0;
+    }
+
+    .down {
+      min-height: 315px;
+    }
+  }
+
+  .dropdown__title {
+    padding: 15px;
+
+    p {
+      font-size: 1.2rem;
+    }
+  }
+
+  .dropdown__btn {
+    font-size: 1.5rem;
+  }
+}

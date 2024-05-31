@@ -1,6 +1,7 @@
 import { Link, useLocation } from 'react-router-dom'
+
 import logo from '../../images/logo.png'
-import styles from './styles.module.css'
+import styles from './styles.module.scss'
 
 function Header() {
   let url = useLocation()
