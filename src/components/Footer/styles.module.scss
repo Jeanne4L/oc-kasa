@@ -2,16 +2,17 @@
   background-color: #000;
   padding: 50px 0;
   margin-top: 50px;
+
   &__container {
     text-align: center;
   }
-}
 
-p {
-  color: white;
-  font-size: 0.8rem;
-  width: 150px;
-  margin: 10px auto;
+  p {
+    color: white;
+    font-size: 0.8rem;
+    width: 150px;
+    margin: 10px auto;
+  }
 }
 
 @media (min-width: 900px) {

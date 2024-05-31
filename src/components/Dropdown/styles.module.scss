@@ -1,6 +1,7 @@
 .dropdown {
   margin-bottom: 25px;
   position: relative;
+
   &__title {
     position: relative;
     padding: 8px 10px;
@@ -10,21 +11,25 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     p {
       margin: 0;
       font-size: 0.9rem;
       font-weight: 600;
     }
+
     i,
     p {
       color: white;
     }
   }
+
   &__btn {
     transition: transform 0.4s ease-out;
     font-size: 1.1rem;
     cursor: pointer;
   }
+
   &__text {
     background-color: #f6f6f6;
     border-radius: 10px;
@@ -32,9 +37,11 @@
     max-height: 30px;
     overflow: hidden;
     transition: max-height 0.7s ease, min-height 0.7s ease;
+
     ul {
       margin: 0;
     }
+
     p,
     li {
       margin: 0;
@@ -42,6 +49,7 @@
       line-height: 1.5rem;
     }
   }
+
   &__content {
     padding: 45px 10px;
   }
@@ -82,9 +90,11 @@
 
   .rental_dropdown {
     width: 47%;
+
     .dropdown__text {
       min-height: 0;
     }
+
     .down {
       min-height: 315px;
     }
@@ -92,6 +102,7 @@
 
   .dropdown__title {
     padding: 15px;
+
     p {
       font-size: 1.2rem;
     }

@@ -2,7 +2,7 @@ import Banner from '../../components/Banner'
 import homeBannerImg from '../../images/home__banner.png'
 import Rentals from '../../data/rentals.json'
 import Card from '../../components/Card'
-import styles from '../../components/Card/styles.module.css'
+import styles from './styles.module.scss'
 
 /**
  *
@@ -10,24 +10,20 @@ import styles from '../../components/Card/styles.module.css'
  */
 
 function Home() {
-    return (
-        <main>
-            {/* <Banner
-                image={homeBannerImg}
-                paragraphText="Chez vous, partout et ailleurs"
-            /> */}
-            <Banner
-                image={homeBannerImg}
-                firstParagraphText="Chez vous,"
-                secondParagraphText="partout et ailleurs"
-            />
-            <div className={styles.card_container}>
-                {Rentals.map((rental) => (
-                    <Card rental={rental} key={`${rental.id}`} />
-                ))}
-            </div>
-        </main>
-    )
+  return (
+    <main>
+      <Banner
+        image={homeBannerImg}
+        firstParagraphText="Chez vous,"
+        secondParagraphText="partout et ailleurs"
+      />
+      <div className={styles.cards_container}>
+        {Rentals.map((rental) => (
+          <Card rental={rental} key={`${rental.id}`} />
+        ))}
+      </div>
+    </main>
+  )
 }
 
 export default Home

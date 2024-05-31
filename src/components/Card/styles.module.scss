@@ -9,11 +9,13 @@
   position: relative;
   border-radius: 10px;
   overflow: hidden;
+
   img {
     height: 100%;
     width: 100%;
     object-fit: cover;
   }
+
   figcaption {
     position: absolute;
     bottom: 0;
@@ -43,8 +45,10 @@
   .link {
     width: 31%;
   }
+
   .card {
     height: 300px;
+
     figcaption {
       padding: 15px;
     }
