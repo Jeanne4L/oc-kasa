@@ -1,15 +1,17 @@
 import { Link, useLocation } from 'react-router-dom'
 import logo from '../../images/logo.png'
+import styles from './styles.module.css'
 
 function Header() {
     let url = useLocation()
     return (
-        <header>
-            <div className="container">
+        <header className={`${styles.header}`}>
+            <div className={`${styles.header__container}`}>
                 <Link to="/">
                     <img
                         src={logo}
                         alt="Mot Kasa avec une maison à la place du a"
+                        className={`${styles.header__logo}`}
                     />
                 </Link>
 
@@ -18,7 +20,7 @@ function Header() {
                         <li>
                             <Link
                                 to="/"
-                                className={url.pathname === '/' ? 'active' : ''}
+                                className={url.pathname === '/' ? `${styles.header__active}` : ''}
                             >
                                 Accueil
                             </Link>
@@ -27,7 +29,7 @@ function Header() {
                             <Link
                                 to="/about"
                                 className={
-                                    url.pathname === '/about' ? 'active' : ''
+                                    url.pathname === '/about' ? `${styles.header__active}` : ''
                                 }
                             >
                                 À propos
