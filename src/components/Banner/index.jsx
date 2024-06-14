@@ -5,24 +5,25 @@ import styles from './styles.module.scss'
 /**
  * @component
  * @param {*} props
- * @param {string} props.image - background image source
- * @param {string} [props.paragraphText] - business slogan
+ * @param {string} image - background image source
+ * @param {string} [paragraphText] - business slogan
  * @returns
  */
 
-function Banner(props) {
+function Banner({image, firstParagraphText, secondParagraphText}) {
   let url = useLocation()
+  
   return (
     <div
       className={`${styles.banner}
         ${url.pathname === '/' ? styles.home_banner : styles.about_banner}`}
     >
-      <img src={props.image} alt="paysage" />
+      <img src={image} alt="paysage" />
       {/* This component can contain text */}
-      {props.firstParagraphText && (
+      {firstParagraphText && (
         <div className={styles.banner__text}>
-          <p>{props.firstParagraphText}</p>
-          <p>{props.secondParagraphText}</p>
+          <p>{firstParagraphText}</p>
+          <p>{secondParagraphText}</p>
         </div>
       )}
     </div>

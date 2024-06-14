@@ -5,18 +5,18 @@ import styles from './styles.module.scss'
 /**
  * @component
  * @param {*} props
- * @param {number} props.rental.id - rental id
- * @param {string} props.rental.cover - main rental image source
- * @param {string} props.rental.title - rental title
+ * @param {number} rental.id - rental id
+ * @param {string} rental.cover - main rental image source
+ * @param {string} rental.title - rental title
  * @returns {JSX.Element} -
  */
 
-function Card(props) {
+function Card({rental}) {
   return (
-    <Link to={`/rental/${props.rental.id}`} className={styles.link}>
+    <Link to={`/rental/${rental.id}`} className={styles.link}>
       <figure className={styles.card}>
-        <img src={props.rental.cover} alt={props.rental.title} />
-        <figcaption>{props.rental.title}</figcaption>
+        <img src={rental.cover} alt={rental.title} />
+        <figcaption>{rental.title}</figcaption>
       </figure>
     </Link>
   )
