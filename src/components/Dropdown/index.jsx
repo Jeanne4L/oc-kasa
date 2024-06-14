@@ -6,13 +6,13 @@ import styles from './styles.module.scss'
 /**
  * @component
  * @param {*} props
- * @param {string} props.title - rental title
- * @param {string} [props.paragraphText] - dropdown description
- * @param {Array<string>} [props.list] - rental available equipment
+ * @param {string} title - rental title
+ * @param {string} [paragraphText] - dropdown description
+ * @param {Array<string>} [list] - rental available equipment
  * @returns {JSX.Element} - collapsible element
  */
 
-function Dropdown(props) {
+function Dropdown({title, paragraphText, list}) {
   let url = useLocation()
 
   const [open, setOpen] = useState(false)
@@ -32,10 +32,9 @@ function Dropdown(props) {
       }`}
     >
       <div className={`${styles.dropdown__title}`}>
-        <p>{props.title}</p>
+        <p>{title}</p>
         <i
-          className={`fa-solid fa-chevron-up 
-                    ${styles.dropdown__btn} ${btnUp ? styles.btn_up : ''}`}
+          className={`fa-solid fa-chevron-up ${styles.dropdown__btn} ${btnUp ? styles.btn_up : ''}`}
           onClick={toggle}
         ></i>
       </div>
@@ -43,10 +42,10 @@ function Dropdown(props) {
       <div className={`${styles.dropdown__text} ${open ? styles.down : ''}`}>
         <div className={styles.dropdown__content}>
           {/* This part can have a paragraph or a list */}
-          {props.paragraphText && <p>{props.paragraphText}</p>}
-          {props.list && (
+          {paragraphText && <p>{paragraphText}</p>}
+          {list && (
             <ul>
-              {props.list.map((listItem, index) => (
+              {list.map((listItem, index) => (
                 <li key={`${listItem}-${index}`}>{listItem}</li>
               ))}
             </ul>
