@@ -5,29 +5,29 @@ import styles from './styles.module.scss'
 /**
  * @component
  * @param {*} props
- * @param {Array<string>} props.pictures - rental images sources
+ * @param {Array<string>} pictures - rental images sources
  * @returns {JSX.Element} - image carousel
  */
 
-function Carousel(props) {
+function Carousel({pictures}) {
   const [count, setCount] = useState(1)
 
   function limitCount() {
-    if (count > props.pictures.length) {
+    if (count > pictures.length) {
       setCount(1)
     } else if (count < 1) {
-      setCount(props.pictures.length)
+      setCount(pictures.length)
     }
   }
   limitCount()
 
-  for (let i = 0; i < props.pictures.length; i++) {
+  for (let i = 0; i < pictures.length; i++) {
     return (
       <div className={styles.carousel}>
-        <img src={props.pictures[count - 1]} alt="logement" />
+        <img src={pictures[count - 1]} alt="logement" />
 
         {/* Buttons and numbering are displayed if carousel have more than one picture */}
-        {props.pictures.length > 1 && (
+        {pictures.length > 1 && (
           <div>
             <span
               className={`material-symbols-outlined ${styles.back} ${styles.nav_btn}`}
@@ -44,7 +44,7 @@ function Carousel(props) {
             </span>
 
             <span className={styles.numbering}>
-              {count}/{props.pictures.length}
+              {count}/{pictures.length}
             </span>
           </div>
         )}
