@@ -13,14 +13,12 @@ import styles from './styles.module.scss'
  */
 
 function Dropdown({title, paragraphText, list}) {
-  let url = useLocation()
-
   const [open, setOpen] = useState(false)
-  const [btnUp, setBtnUp] = useState(false)
+
+  let url = useLocation()
 
   function toggle() {
     setOpen(!open)
-    setBtnUp(!btnUp)
   }
 
   return (
@@ -34,7 +32,7 @@ function Dropdown({title, paragraphText, list}) {
       <div className={`${styles.dropdown__title}`}>
         <p>{title}</p>
         <i
-          className={`fa-solid fa-chevron-up ${styles.dropdown__btn} ${btnUp ? styles.btn_up : ''}`}
+          className={`fa-solid fa-chevron-up ${styles.dropdown__btn} ${open ? styles.btn_up : ''}`}
           onClick={toggle}
         ></i>
       </div>
