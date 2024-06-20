@@ -12,7 +12,7 @@ import styles from './styles.module.scss'
  * @returns {JSX.Element} - collapsible element
  */
 
-function Dropdown({title, paragraphText, list}) {
+function Dropdown({title, children}) {
   const [open, setOpen] = useState(false)
 
   let url = useLocation()
@@ -39,15 +39,7 @@ function Dropdown({title, paragraphText, list}) {
 
       <div className={`${styles.dropdown__text} ${open ? styles.down : ''}`}>
         <div className={styles.dropdown__content}>
-          {/* This part can have a paragraph or a list */}
-          {paragraphText && <p>{paragraphText}</p>}
-          {list && (
-            <ul>
-              {list.map((listItem, index) => (
-                <li key={`${listItem}-${index}`}>{listItem}</li>
-              ))}
-            </ul>
-          )}
+          {children}
         </div>
       </div>
     </div>

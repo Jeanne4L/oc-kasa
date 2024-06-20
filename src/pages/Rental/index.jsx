@@ -53,11 +53,18 @@ function Rental() {
             </div>
 
             <div className={styles.dropdown_container}>
-              <Dropdown
-                title={'Description'}
-                paragraphText={rental.description}
-              />
-              <Dropdown title={'Équipements'} list={rental.equipments} />
+              <Dropdown title={'Description'}>
+                <p>
+                  {rental.description}
+                </p>
+              </Dropdown>
+              <Dropdown title={'Équipements'}>
+                <ul>
+                  {rental.equipments.map((equipment)=>(
+                    <li key={`${equipment}-${rental.id}`}>{equipment}</li>
+                  ))}
+                </ul>
+              </Dropdown>
             </div>
           </React.Fragment>
         ))}
