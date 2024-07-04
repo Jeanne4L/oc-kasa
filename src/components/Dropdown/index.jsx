@@ -12,7 +12,7 @@ import styles from './styles.module.scss'
  * @returns {JSX.Element} - collapsible element
  */
 
-function Dropdown({title, children}) {
+const Dropdown = ({title, children}) => {
   const [open, setOpen] = useState(false)
 
   let url = useLocation()

@@ -9,7 +9,7 @@ import styles from './styles.module.scss'
  * @returns {JSX.Element} - home page
  */
 
-function Home() {
+const Home = () => {
   return (
     <main>
       <Banner

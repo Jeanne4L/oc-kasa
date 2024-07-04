@@ -10,7 +10,7 @@ import styles from './styles.module.scss'
  * @returns
  */
 
-function Banner({image, firstParagraphText, secondParagraphText}) {
+const Banner = ({image, firstParagraphText, secondParagraphText}) => {
   let url = useLocation()
   
   return (

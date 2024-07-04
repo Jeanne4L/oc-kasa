@@ -9,7 +9,7 @@ import styles from './styles.module.scss'
  * @returns {JSX.Element} - image carousel
  */
 
-function Carousel({pictures}) {
+const Carousel = ({pictures}) => {
   const [count, setCount] = useState(1)
 
   function limitCount() {

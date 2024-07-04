@@ -7,7 +7,7 @@ import styles from './styles.module.scss'
  * @returns {JSX.Element} - rental tag
  */
 
-function Tag({tags}) {
+const Tag = ({tags}) => {
   return (
     <div className={styles.tags}>
       {tags.map((tag, index) => (

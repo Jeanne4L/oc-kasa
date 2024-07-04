@@ -13,7 +13,7 @@ import Carousel from '../../components/Carousel'
  * @returns {JSX.Element} - rental page
  */
 
-function Rental() {
+const  Rental = () => {
   const { id } = useParams()
   const rental = Rentals.filter((rental) => rental.id === id)
 
@@ -53,12 +53,12 @@ function Rental() {
             </div>
 
             <div className={styles.dropdown_container}>
-              <Dropdown title={'Description'}>
+              <Dropdown title='Description'>
                 <p>
                   {rental.description}
                 </p>
               </Dropdown>
-              <Dropdown title={'Équipements'}>
+              <Dropdown title='Équipements'>
                 <ul>
                   {rental.equipments.map((equipment)=>(
                     <li key={`${equipment}-${rental.id}`}>{equipment}</li>
