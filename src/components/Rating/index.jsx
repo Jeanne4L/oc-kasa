@@ -7,7 +7,7 @@ import styles from './styles.module.scss'
  * @returns {JSX.Element} - rental score out of 5 with stars
  */
 
-function Rating({rental}) {
+const Rating = ({rental}) => {
   // Scoring arrays
   const empty = Array(5).fill(<i className="fa-solid fa-star"></i>)
   const full = Array(5).fill(<i className="fa-solid fa-star"></i>)

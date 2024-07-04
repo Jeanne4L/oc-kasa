@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom'
 import logo from '../../images/logo.png'
 import styles from './styles.module.scss'
 
-function Header() {
+const Header = () => {
   let url = useLocation()
   return (
     <header className={`${styles.header}`}>

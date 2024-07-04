@@ -7,7 +7,7 @@ import styles from './styles.module.scss'
  * @returns {JSX.Element} - 404 page
  */
 
-function Error() {
+const Error = () => {
   return (
     <main className={styles.error}>
       <div className={styles.message}>

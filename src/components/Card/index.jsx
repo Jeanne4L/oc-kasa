@@ -11,7 +11,7 @@ import styles from './styles.module.scss'
  * @returns {JSX.Element} -
  */
 
-function Card({rental}) {
+const Card = ({rental}) => {
   return (
     <Link to={`/rental/${rental.id}`} className={styles.link}>
       <figure className={styles.card}>
